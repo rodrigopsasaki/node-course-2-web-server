@@ -48,6 +48,16 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    projects: [
+      'Alpha 11',
+      'Xeon 69'
+    ]
+  });
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
